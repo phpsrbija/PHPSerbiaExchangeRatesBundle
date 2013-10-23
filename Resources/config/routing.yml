@@ -1,0 +1,35 @@
+phpserbia_exchange_rate_index:
+    pattern: /
+    methods: [GET]
+    defaults:
+        _controller: sylius.controller.exchange_rate:indexAction
+        _sylius:
+            template: SyliusWebBundle:Backend/ExchangeRate:index.html.twig
+            sortable: true
+            paginate: false
+
+phpserbia_exchange_rate_create:
+    pattern: /new
+    methods: [GET, POST]
+    defaults:
+        _controller: sylius.controller.exchange_rate:createAction
+        _sylius:
+            template: SyliusWebBundle:Backend/ExchangeRate:create.html.twig
+            redirect: phpserbia_exchange_rate_index
+
+phpserbia_exchange_rate_update:
+    pattern: /{id}/edit
+    methods: [GET, PUT]
+    defaults:
+        _controller: sylius.controller.exchange_rate:updateAction
+        _sylius:
+            template: SyliusWebBundle:Backend/ExchangeRate:update.html.twig
+            redirect: phpserbia_exchange_rate_index
+
+phpserbia_exchange_rate_delete:
+    pattern: /{id}
+    methods: [DELETE]
+    defaults:
+        _controller: sylius.controller.exchange_rate:deleteAction
+        _sylius:
+            redirect: phpserbia_exchange_rate_index

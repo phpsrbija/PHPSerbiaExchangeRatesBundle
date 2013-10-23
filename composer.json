@@ -1,0 +1,37 @@
+{
+    "name": "phpserbia/exchange-rates-bundle",
+    "type": "symfony-bundle",
+    "description": "Robust exchange rates system for Sylius, webshop engine for Symfony2.",
+    "keywords": ["shop", "ecommerce", "conversion", "exchange", "rates"],
+    "homepage": "http://phpsrbija.rs",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zarko Stankovic",
+            "email": "stankovic.zarko@gmail.com",
+            "homepage": "http://zarkostankovic.com"
+        },
+        {
+            "name": "Community contributions",
+            "homepage": "https://github.com/phpsrbija/PHPSerbiaExchangeRatesBundle/contributors"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "2.0.*@dev"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": { "PHPSerbia\\Bundle\\ExchangeRatesBundle": "" }
+    },
+    "target-dir": "PHPSerbia/Bundle/ExchangeRatesBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
